@@ -31,7 +31,10 @@ jobs:
       - name: Lancer les test d'intégration
         run: npm run test:integration
 
-      - name: Lancer les tests End-to-End
+      - name: Installer les navigateurs Playwright
+        run: npx playwright install --with-deps
+        
+      - name:   Lancer les tests e2e
         run: npm run test:e2e
 
 

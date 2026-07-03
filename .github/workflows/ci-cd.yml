@@ -38,5 +38,8 @@ jobs:
         run: npm run test:e2e
 
       
+      - name: Déclencher le déploiement
+        if: success()
+        run: curl -X "${{secret_RENDER_DEPLOY_HOOK_URL}}"
 
 

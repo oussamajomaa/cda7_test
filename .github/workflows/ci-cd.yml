@@ -40,6 +40,6 @@ jobs:
       
       - name: Déclencher le déploiement
         if: success()
-        run: curl -X POST "${{secret_RENDER_DEPLOY_HOOK_URL}}"
+        run: curl -X POST "${{secrets.RENDER_DEPLOY_HOOK_URL}}"
 
 

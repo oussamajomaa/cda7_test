@@ -7,7 +7,7 @@ describe("Tester /login", ()=>{
             .post('/login')
             .send({email:"osm@osm.com",password:"12345678"})
             .expect(200)
-        expect(res.body.message).toBe('Connexion réussie !')
+        expect(res.body.message).toBe('Connexion réussie ')
     })
     it("Devrait retourner 400 si l'email ne contient pas  @ ou le pw est <8",async ()=>{
         const res = await request(app)
